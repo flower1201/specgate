@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+.specgate-out/
+.specgate-out-fail/
+examples/**/.specgate-out/
+examples/**/.specgate-out-fail/
+reports/
+.turbo/
+*.tsbuildinfo
+.npmrc.local
+.env
+.env.*
+!examples/demo-repo/

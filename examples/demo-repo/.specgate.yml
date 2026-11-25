@@ -1,0 +1,6 @@
+# Demo gate config
+strict: false
+lang: both
+base: HEAD~1
+outDir: .specgate-out
+requireEvidenceForMust: true

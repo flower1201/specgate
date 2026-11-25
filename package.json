@@ -1,0 +1,68 @@
+{
+  "name": "specgate",
+  "version": "0.1.0-rc.1",
+  "description": "Local-first acceptance / SPEC gate for AI coding agents. Extract checklist rules, gather evidence, emit bilingual gate reports.",
+  "type": "module",
+  "bin": {
+    "specgate": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md"
+  ],
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "demo": "node scripts/demo.mjs",
+    "prepublishOnly": "node -e \"console.error('npm Registry HOLD: specgate@0.1.0-rc.1 is not published. Remove this hook only when intentionally releasing.'); process.exit(1)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flower1201/specgate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flower1201/specgate/issues"
+  },
+  "homepage": "https://github.com/flower1201/specgate#readme",
+  "keywords": [
+    "acceptance",
+    "spec",
+    "gate",
+    "checklist",
+    "ai-agents",
+    "cli",
+    "local-first",
+    "typescript"
+  ],
+  "author": "flower1201",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.13.10",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}
